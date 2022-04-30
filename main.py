@@ -44,7 +44,7 @@ app = Client(
 
 with app:
     me = app.get_me()
-    print("Started for", me.first_name)
+    logging.info("Started for {name}", name=me.first_name)
 
 
 @app.on_message(filters.channel & ~filters.me)
