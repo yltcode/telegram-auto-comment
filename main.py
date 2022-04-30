@@ -24,7 +24,7 @@ from pyrogram.errors import MsgIdInvalid
 
 import logging
 
-logging.basicConfig(level=logging.FATAL)  # remove watermarks
+logging.basicConfig(level=logging.FATAL)
 
 if os.path.exists("session.session-journal"):
     os.remove("session.session-journal")
@@ -54,7 +54,7 @@ async def handler(app: Client, message: Message):
         post = await app.get_discussion_message(
             message.chat.id, message.id
         )
-        await post.reply(text)  # send comment
+        await post.reply(text)
     except MsgIdInvalid:
         ...
 
