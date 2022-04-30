@@ -24,7 +24,7 @@ from pyrogram.errors import MsgIdInvalid
 
 import logging
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.FATAL)
 
 if os.path.exists("session.session-journal"):
     os.remove("session.session-journal")
@@ -44,7 +44,7 @@ app = Client(
 
 with app:
     me = app.get_me()
-    logging.info("Started for {name}", name=me.first_name)
+    print("Started for", me.first_name)
 
 
 @app.on_message(filters.channel & ~filters.me)
