@@ -22,11 +22,6 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from pyrogram.errors import MsgIdInvalid
 
-directory = os.path.dirname(__file__)
-
-if directory != os.getcwd():
-    os.chdir(directory)
-
 if os.path.exists("session.session-journal"):
     os.remove("session.session-journal")
 
