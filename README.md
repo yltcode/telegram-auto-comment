@@ -31,7 +31,7 @@ nano config.yaml
 
 `CTRL + X` - чтобы выйти
 
-- Запускаем
+- #### Запускаем
 
 ```sh
 python3 main.py
