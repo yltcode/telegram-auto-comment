@@ -24,7 +24,13 @@ from pyrogram.errors import MsgIdInvalid
 
 import logging
 
-logging.basicConfig(level=logging.FATAL)
+logging.basicConfig(level=logging.ERROR)
+
+path = os.path.realpath(__file__)
+directory = os.path.dirname(path)
+
+if directory != os.getcwd():
+    os.chdir(directory)
 
 if os.path.exists("session.session-journal"):
     os.remove("session.session-journal")
