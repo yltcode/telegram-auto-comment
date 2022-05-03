@@ -1,8 +1,12 @@
 # Автоматическое комментирование постов в Telegram
 
-[![license](https://shields.io/github/license/yltcode/telegram-auto-comment?style=flat-square&color=blue)](https://www.gnu.org/licenses/quick-guide-gplv3.ru.html)
-
-[![code-size](https://shields.io/github/languages/code-size/yltcode/telegram-auto-comment?style=flat-square&color=orange)](https://github.com/yltcode/telegram-auto-comment)
+[![license](https://img.shields.io/github/license/yltcode/telegram-auto-comment?style=for-the-badge)](LICENSE)
+[![last-commit](https://img.shields.io/github/last-commit/FoxUserbot/FoxUserbot?style=for-the-badge)](https://github.com/yltcode/telegram-auto-comment/commits/main)
+[![codefactor](https://www.codefactor.io/repository/github/FoxUserbot/FoxUserbot/badge?style=for-the-badge)]()
+[![stars](https://img.shields.io/github/stars/yltcode/telegram-auto-comment?style=for-the-badge)]()
+[![repo-size](https://img.shields.io/github/repo-size/yltcode/telegram-auto-comment?style=for-the-badge)]()
+[![languages](https://img.shields.io/github/languages/top/yltcode/telegram-auto-comment?style=for-the-badge)]()
+[![python](https://img.shields.io/badge/python-%3E%203.6-blue?style=for-the-badge)]()
 
 ## Установка
 - #### Клонирование репозитория
@@ -18,8 +22,6 @@ pip3 install -r requirements.txt
 ```
 
 - #### Редактирование конфига
-
-В инструкции будет использоваться `nano`, а Вы можете использовать любой другой текстовый редактор
 
 ```sh
 nano config.yaml
