@@ -21,7 +21,7 @@ import random
 
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from pyrogram.errors import MsgIdInvalid
+from pyrogram.errors import ChannelPrivate, MsgIdInvalid
 
 import logging
 
@@ -62,7 +62,7 @@ async def handler(app: Client, message: Message):
             message.chat.id, message.id
         )
         await post.reply(text_with_font)
-    except MsgIdInvalid:
+    except (ChannelPrivate, MsgIdInvalid):
         ...
 
 
