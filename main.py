@@ -56,7 +56,7 @@ async def handler(app: Client, message: Message):
     try:
         text_no_font = random.choice(messages)
         chars = utils.make_text_with_font(text_no_font)
-        text = "".join(chars)
+        text_with_font = "".join(chars)
 
         post = await app.get_discussion_message(
             message.chat.id, message.id
