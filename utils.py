@@ -3,7 +3,7 @@ import random
 
 normal = list("абвгдежзийклмнопрстуфхцчшщыьэюя")
 
-with open("chars.json", "r") as file:
+with open("chars.json", "r", encoding="utf-8") as file:
     fonts = json.load(file)
 
 
