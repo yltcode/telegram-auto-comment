@@ -14,5 +14,8 @@ def make_text_with_font(string: str):
         elif letter.isupper():
             continue
         else:
-            index = normal.index(letter)
-            yield random.choice(fonts)[index]
+            if letter in normal:
+                index = normal.index(letter)
+                yield random.choice(fonts)[index]
+            else:
+                yield letter
