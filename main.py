@@ -15,6 +15,7 @@
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import os
+import utils
 import yaml
 import random
 
@@ -31,9 +32,6 @@ directory = os.path.dirname(path)
 
 if directory != os.getcwd():
     os.chdir(directory)
-
-if os.path.exists("session.session-journal"):
-    os.remove("session.session-journal")
 
 with open("config.yaml", "r", encoding="utf-8") as file:
     config = yaml.safe_load(file)
@@ -56,11 +54,12 @@ with app:
 @app.on_message(filters.channel & ~filters.me)
 async def handler(app: Client, message: Message):
     try:
-        text = random.choice(messages)
+        text_no_font = random.choice(messages)
+        text_with_font = utils.make_text_with_font(text_no_font)
         post = await app.get_discussion_message(
             message.chat.id, message.id
         )
-        await post.reply(text)
+        await post.reply(text_with_font)
     except MsgIdInvalid:
         ...
 
