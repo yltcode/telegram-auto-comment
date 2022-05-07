@@ -33,7 +33,7 @@ directory = os.path.dirname(path)
 if directory != os.getcwd():
     os.chdir(directory)
 
-with open("config.yaml", "r", encoding="utf-8") as file:
+with open("config.yml", "r", encoding="utf-8") as file:
     config = yaml.safe_load(file)
 
 api_id = config["api_id"]
