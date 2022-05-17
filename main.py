@@ -58,7 +58,9 @@ async def handler(app: Client, message: Message):
             message.chat.id, message.id
         )
 
-        if len(messages) == 1:
+        if not isinsance(messages, list):
+            text = messages
+        elif len(messages) > 1:
             [text] = messages
         else:
             text = random.choice(messages)
