@@ -54,13 +54,18 @@ with app:
 @app.on_message(filters.channel & ~filters.me)
 async def handler(app: Client, message: Message):
     try:
-        text_no_font = random.choice(messages)
-        chars = utils.make_text_with_font(text_no_font)
-        text_with_font = "".join(chars)
-
         post = await app.get_discussion_message(
             message.chat.id, message.id
         )
+
+        if len(messages) == 1:
+            [text] = messages
+        else:
+            text = random.choice(messages)
+
+        chars_with_font = utils.make_text_with_font(text)
+        text_with_font = "".join(chars_with_font)
+
         await post.reply(text_with_font)
     except (ChannelPrivate, MsgIdInvalid):
         ...
