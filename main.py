@@ -58,7 +58,7 @@ async def handler(app: Client, message: Message):
             message.chat.id, message.id
         )
 
-        if isinsance(messages, str):
+        if isinstance(messages, str):
             text = messages
         elif len(messages) == 1:
             [text] = messages
