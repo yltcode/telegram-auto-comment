@@ -52,7 +52,7 @@ with app:
 
 
 @app.on_message(filters.channel & ~filters.me)
-async def handler(app: Client, message: Message):
+async def handler(_, message: Message):
     try:
         post = await app.get_discussion_message(
             message.chat.id, message.id
