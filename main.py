@@ -61,7 +61,7 @@ async def handler(_, message: Message):
         if isinstance(messages, str):
             text = messages
         elif len(messages) == 1:
-            [text] = messages
+            text ,= messages
         else:
             text = random.choice(messages)
 
