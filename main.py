@@ -43,7 +43,10 @@ messages = config["messages"]
 app = Client(
     "session",
     api_id,
-    api_hash
+    api_hash,
+    app_version="3.7 x64",
+    device_model="PC 64bit",
+    system_version="Windows 10"
 )
 
 with app:
